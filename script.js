@@ -2,8 +2,7 @@
 var generateBtn = document.querySelector("#generate");
 
 
-
-var numbers = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9",];
+var numbers = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
 var upperCase = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N","O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z",];
 var lowerCase = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n","0", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z",];
 var special = ["!", "@", "#", "$", "%", "^", "*", "(", ")", "{", "}", "-", "_", "=", "+", "[", "]", "?", "<", "/",];
@@ -21,7 +20,7 @@ var askSpecial =confirm("Do you want your password to include special chracters?
 var responses = {
 length: length,
 askNumbers: askNumbers,
-askLowerCase: askLowercase,
+askLowerCase: askLowerCase,
 askUpperCase: askUpperCase,
 askSpecial: askSpecial
 }
@@ -36,10 +35,12 @@ isValid = true;
 return responses;
 }
 
-function writePassword() {
+function generatePassword() {
   var passwordOptions = questions();
   var possibleCombo = [];
   var finalPassword = "";
+
+
 
   if (passwordOptions.askNumbers) {
     for (var i of numbers)
@@ -59,8 +60,11 @@ function writePassword() {
   }
 
 
+
+
+
 for (var i = 0; i < passwordOptions.length; i++) {
-  finalpassword += possibleCombo[Math.floor(Math.random() * possibleCombo.length)];
+  finalPassword += possibleCombo[Math.floor(Math.random() * possibleCombo.length)];
 
 }
  
