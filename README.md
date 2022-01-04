@@ -2,6 +2,9 @@
 # Assingment 3 java script 
 password generator
 
+# live link
+
+https://olvera1208.github.io/password-generator/
 
 # Goal
 client has to access data and would like a safe and high quality of security. They would like an application that randomly generates passwords for them.
